@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
 		return 0;
     }
     if (choice == 2) {
-		Purse(525) p;
-		p.connect();
+		Purse(525);
+        void connect();
     }
     return a.exec();
 }

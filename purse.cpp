@@ -7,21 +7,22 @@ Purse::Purse() {
 }
 
 Purse::Purse(const int SOLDE) {
-	int m_essaie = 3;
 	bool m_blocked = false;
 	m_pin = rand();
 	std::cout << m_pin << std::endl;
+	auth();
 }
 
 
 void Purse::auth() {
 	int m_essaie_max = 3;
+	int m_essaie = 3;
 	int pin = NULL;
 	while(pin != m_pin) {
-		m_essaie--;
 		std::cout << "Nombre d'essaie restant : " << m_essaie << std::endl;
 		std::cout << "Votre pin : ";
 		std::cin >> pin;
+		m_essaie--;
 		if (m_essaie == 0) {
 			bool blocked = true;
 			std::cout << "Votre compmte est bloquer !";
